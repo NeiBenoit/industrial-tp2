@@ -48,7 +48,7 @@ jobs:
       run: echo ${{ secrets.PERSONAL_TOKEN }} | docker login ghcr.io -u NeiBenoit --password-stdin
 
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ghcr.io/NeiBenoit/tp2:latest
+      run: docker build . --file Dockerfile --tag ghcr.io/neibenoit/tp2:latest
 
     - name: Push the image into the registry
-      run: docker push ghcr.io/NeiBenoit/tp2:latest
+      run: docker push ghcr.io/neibenoit/tp2:latest
