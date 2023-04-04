@@ -45,10 +45,10 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Login to registry
-      run: echo ${{ secrets.PERSONAL_TOKEN }} | docker login ghcr.io -u <NeiBenoit> --password-stdin
+      run: echo ${{ secrets.PERSONAL_TOKEN }} | docker login ghcr.io -u NeiBenoit --password-stdin
 
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ghcr.io/<NeiBenoit>/tp2:latest
+      run: docker build . --file Dockerfile --tag ghcr.io/NeiBenoit/tp2:latest
 
     - name: Push the image into the registry
-      run: docker push ghcr.io/<NeiBenoit>/tp2:latest
+      run: docker push ghcr.io/NeiBenoit/tp2:latest
