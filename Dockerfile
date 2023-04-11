@@ -1,10 +1,6 @@
 
 FROM python:3.9
 
-RUN useradd -u 8877 nonroot
-
-USER nonroot
-
 WORKDIR /code
 
 COPY ./setup.py /code/setup.py
@@ -15,7 +11,7 @@ COPY ./README.md /code/README.md
 
 COPY ./src /code/src
 
-RUN sudo -H pip install /code
+RUN pip install /code
 
 COPY ./controller /code/controller
 
