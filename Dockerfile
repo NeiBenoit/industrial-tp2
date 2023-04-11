@@ -1,8 +1,7 @@
 
 FROM python:3.9
 
-RUN addgroup -S nonroot \
-    && adduser -S nonroot -G nonroot
+RUN useradd -u 8877 nonroot
 
 USER nonroot
 
